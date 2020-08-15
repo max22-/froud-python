@@ -8,7 +8,7 @@ class Process(threading.Thread):
 
     def run(self):
         self.setup()
-        while True:
+        while not self.__stopFlag:
             self.loop()
 
     def stop(self):
