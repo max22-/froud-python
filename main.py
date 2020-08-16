@@ -24,7 +24,7 @@ class Printer(froud.Process):
 if __name__ == '__main__':
     t = Timer()
     p = Printer()
-    froud.connect(t.output,p.input)
+    froud.connect(t.output, p.input)
     p.start()
     t.start()
     while True:
