@@ -7,7 +7,6 @@ class Process(threading.Thread):
         self.__stopFlag = False
 
     def run(self):
-        self.setup()
         while not self.__stopFlag:
             self.loop()
 
