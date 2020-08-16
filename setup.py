@@ -8,7 +8,7 @@ setuptools.setup(
     version="0.1.0",
     author="Maxime ANDRÉ",
     author_email="maxime.andre1986@gmail.com",
-    long_description="A Python library inspired by Flow-Based Programming",
+    description="A Python library inspired by Flow-Based Programming",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/max22-/froud-python",
