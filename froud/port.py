@@ -1,6 +1,6 @@
 from itertools import cycle
 import time
-from wire import Wire
+from froud.wire import Wire
 
 
 class Inlet:
