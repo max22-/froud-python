@@ -26,8 +26,7 @@ if __name__ == '__main__':
     p = Printer()
     froud.connect(t.output, p.input)
     s = froud.Scheduler()
-    s.add(t)
-    s.add(p)
+    s.add([t, p])
     s.start()
     while True:
         pass
