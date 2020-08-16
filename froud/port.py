@@ -13,6 +13,8 @@ class Inlet:
         self.__iterator = cycle(self.__wires)
 
     def receive(self):
+        if len(self.__wires) == 0:
+            raise RuntimeError("Inlet not connected")
         while True:
             for i in range(len(self.__wires)):
                 w = next(self.__iterator)
@@ -31,6 +33,8 @@ class Outlet:
         self.__wire = wire
 
     def send(self, message):
+        if self.__wire is None:
+            raise RuntimeError("Outlet not connected")
         self.__wire.send(message)
 
 

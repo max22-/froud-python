@@ -3,7 +3,7 @@ class Scheduler:
         self.__processes = set()
 
     def add(self, processes):
-        self.__processes = self.__processes.union(processes)
+        self.__processes.update(processes)
 
     def start(self):
         for p in self.__processes:
