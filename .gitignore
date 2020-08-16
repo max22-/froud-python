@@ -1,0 +1,4 @@
+build/
+dist/
+froud_python.egg-info/
+froud/__pycache__/
