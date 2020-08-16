@@ -10,3 +10,5 @@ class Scheduler:
             p.setup()
         for p in self.__processes:
             p.start()
+        for p in self.__processes:
+            p.join()
