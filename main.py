@@ -20,6 +20,7 @@ class Printer(froud.Process):
     def loop(self):
         print(self.input.receive())
 
+
 if __name__ == '__main__':
     t = Timer()
     p = Printer()
@@ -29,4 +30,3 @@ if __name__ == '__main__':
     while True:
         pass
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
