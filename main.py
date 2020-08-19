@@ -28,6 +28,4 @@ if __name__ == '__main__':
     s = froud.Scheduler()
     s.add([t, p])
     s.start()
-    while True:
-        pass
 
