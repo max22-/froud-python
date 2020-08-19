@@ -22,6 +22,17 @@ class Inlet:
                     return w.receive()
             time.sleep(0.01)
 
+    def data_available(self):
+        if len(self.__wires) == 0:
+            raise RuntimeError("Inlet not connected")
+        for i in range(len(self.__wires)):
+            w = next(self.__iterator)
+            if not w.empty():
+                return True
+        return False
+
+
+
 
 class Outlet:
     def __init__(self):
