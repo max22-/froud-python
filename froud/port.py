@@ -8,7 +8,7 @@ class Inlet:
         self.__wires = set()
         self.__iterator = cycle(self.__wires)
 
-    def acceptwire(self, wire):
+    def accept_wire(self, wire):
         self.__wires.add(wire)
         self.__iterator = cycle(self.__wires)
 
@@ -32,13 +32,11 @@ class Inlet:
         return False
 
 
-
-
 class Outlet:
     def __init__(self):
         self.__wire = None
 
-    def acceptwire(self, wire):
+    def accept_wire(self, wire):
         if self.__wire is not None:
             raise RuntimeError("Outlet already connected")
         self.__wire = wire
@@ -51,5 +49,5 @@ class Outlet:
 
 def connect(outlet, inlet, capacity=0):
     wire = Wire(capacity)
-    outlet.acceptwire(wire)
-    inlet.acceptwire(wire)
+    outlet.accept_wire(wire)
+    inlet.accept_wire(wire)
