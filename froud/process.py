@@ -1,4 +1,5 @@
 import threading
+import time
 
 
 class Process(threading.Thread):
@@ -9,6 +10,7 @@ class Process(threading.Thread):
     def run(self):
         while not self.__stopFlag:
             self.loop()
+            time.sleep(0.01)
 
     def stop(self):
         self.__stopFlag = True
